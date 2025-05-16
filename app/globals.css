@@ -2,7 +2,7 @@
 
 @theme {
   --color-primary: #3A1CE9;
-  --color-secondary: #86C0DF;
+  --color-secondary: #DEC7FF;
   --color-accent: #C1A3FF;
   --color-bg-sand: #FFF7F0;
   --color-bg-green: #D0E3F2;
@@ -16,4 +16,6 @@
 
 
 }
+
+/* Add border radius variable to theme */
 
