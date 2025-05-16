@@ -2,20 +2,29 @@
 
 @theme {
   --color-primary: #3A1CE9;
+  --color-primaryHover: #4221FF;
   --color-secondary: #DEC7FF;
   --color-accent: #C1A3FF;
   --color-bg-sand: #FFF7F0;
+  --color-bg-sandHover: #FFEEE0;
   --color-bg-green: #D0E3F2;
   --color-bg-red: #F6EAF0;
   --color-text-light: #F9EEE7;
   --color-text-dark: #180D06;
 
+
   --font-satoshi: satoshi, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  --shadow-primary: -0.4rem 0.4rem 0px #86C0DF; 
+  --shadow-primary: -0.4rem 0.4rem 0px #180D06;
 
+  --radius-large: 1rem;
+  --radius-small: 0.5rem;
 
 }
 
-/* Add border radius variable to theme */
+
+.bgDots {
+  
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 4 4'%3E%3Cpath fill='black' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
 
