@@ -8,7 +8,7 @@ import { motion } from 'motion/react';
 
 const SignUp = () => {
   return (
-    <div className='h-[100vh] sm:overflow-hidden overflow-x-hidden'>
+    <div className='font-satoshi h-[100vh] sm:overflow-hidden overflow-x-hidden'>
         <nav className='flex justify-between items-center py-2 px-6'>
             {/* absolutely posioned to avoid layout shift when logo is loaded that disturbs motion animation */}
             <Link href={"/"}>
@@ -32,7 +32,7 @@ const SignUp = () => {
                     { y: {duration: 3, ease: 'easeInOut', repeat: Infinity, repeatType: "reverse"}, opacity: {delay: 0.3}}
                 }
                 className='absolute -z-10 opacity-70 top-10 -left-12 w-[500px] h-[550px] rounded-large bgDots'/>
-                <h1 className='font-extrabold text-5xl'>Sign in</h1>
+                <h1 className='font-black text-5xl'>Sign in</h1>
                 <div className='flex flex-col gap-2'>
                     <label className='font-bold' htmlFor="email">Email:*</label>
                     <input name="email" placeholder="Enter your email"
