@@ -32,7 +32,48 @@ const SignUp = () => {
                     { y: {duration: 3, ease: 'easeInOut', repeat: Infinity, repeatType: "reverse"}, opacity: {delay: 0.3}}
                 }
                 className='absolute -z-10 opacity-70 top-10 -left-12 w-[500px] h-[550px] rounded-large bgDots'/>
-                <h1 className='font-black text-5xl'>Sign in</h1>
+                {/* Motion circles */}
+                <div className='relative'>
+                    <h1 className='font-black text-5xl'>Sign in</h1>
+                    <motion.figure 
+                    initial={{y: 10}}
+                    animate={{y: 20}}
+                    transition={{
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                        ease: 'easeInOut',
+                        duration: 5,
+                    }}
+                    className='absolute top-0 right-[24%] sm:right-[52%] w-8 h-8 border-2 bg-accent rounded-full'>
+
+                    </motion.figure>
+                    <motion.figure 
+                    initial={{y: 20}}
+                    animate={{y: 10}}
+                    transition={{
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                        ease: 'easeInOut',
+                        duration: 5,
+                        delay: 0.5,
+                    }}
+                    className='absolute top-0 right-[23%] sm:right-[51%] w-8 h-8 border-2 bg-primary rounded-full'>
+
+                    </motion.figure>
+                    <motion.figure 
+                    initial={{y: 30}}
+                    animate={{y: 0}}
+                    transition={{
+                        repeat: Infinity,
+                        repeatType: 'reverse',
+                        ease: 'easeInOut',
+                        duration: 5,
+                        delay: 0.9,
+                    }}
+                    className='absolute top-0 right-[22%] sm:right-[50%] w-8 h-8 border-2 bg-bg-sand rounded-full'>
+                    </motion.figure>
+
+                </div>
                 <div className='flex flex-col gap-2'>
                     <label className='font-bold' htmlFor="email">Email:*</label>
                     <input name="email" placeholder="Enter your email"
