@@ -3,7 +3,7 @@
 import Button from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'motion/react';
+import { easeInOut, motion } from 'motion/react';
 
 
 const SignUp = () => {
@@ -26,9 +26,11 @@ const SignUp = () => {
             className='flex relative shadow-primary flex-col w-10/12 md:w-8/12 lg:w-6/12 xl:w-4/12 gap-10 p-6 border rounded-large bg-accent'>
                 {/* Background Dots */}
                 <motion.div 
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                transition={{delay: 0.3}}
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: 0}}
+                transition={
+                    { y: {duration: 3, ease: 'easeInOut', repeat: Infinity, repeatType: "reverse"}, opacity: {delay: 0.3}}
+                }
                 className='absolute -z-10 opacity-70 top-10 -left-12 w-[500px] h-[550px] rounded-large bgDots'/>
                 <h1 className='font-extrabold text-5xl'>Sign in</h1>
                 <div className='flex flex-col gap-2'>
