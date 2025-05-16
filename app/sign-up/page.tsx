@@ -3,7 +3,7 @@
 import Button from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
-import { easeInOut, motion } from 'motion/react';
+import { motion } from 'motion/react';
 
 
 const SignUp = () => {
