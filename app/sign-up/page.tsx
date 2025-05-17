@@ -8,18 +8,19 @@ import { motion } from 'motion/react';
 
 const SignUp = () => {
   return (
-    <div className='font-satoshi h-[100vh] sm:overflow-hidden overflow-x-hidden'>
+    // Dot background overflows on mobile -> overflow-x-hidden. No scroll on tablet and desktop -> h-100vh
+    <div className='font-satoshi sm:h-[100vh] overflow-hidden overflow-x-hidden'>
         <nav className='flex justify-between items-center py-2 px-6'>
-            {/* absolutely posioned to avoid layout shift when logo is loaded that disturbs motion animation */}
             <Link href={"/"}>
-                <Image className='absolute top-2' src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' /> 
+                <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' /> 
             </Link>
             <div className='hidden sm:flex gap-2 items-center'>
                 <p className='text-sm'>Don&apos;t have an account?</p>
                 <button className='font-medium cursor-pointer hover:text-slate-700'>Sign up here</button>
             </div>
         </nav>
-        <section className='flex items-center justify-center h-full'>
+        {/* Margin only on mobile */}
+        <section className='flex my-10 sm:my-0 items-center justify-center h-full'>
             <motion.div 
             initial={{y:20}}
             animate={{y: 0}}
@@ -29,7 +30,7 @@ const SignUp = () => {
                 initial={{opacity: 0, y: 20}}
                 animate={{opacity: 1, y: 0}}
                 transition={
-                    { y: {duration: 3, ease: 'easeInOut', repeat: Infinity, repeatType: "reverse"}, opacity: {delay: 0.3}}
+                    { y: {duration: 5, ease: 'easeInOut', repeat: Infinity, repeatType: "reverse"}, opacity: {delay: 0.3}}
                 }
                 className='absolute -z-10 opacity-70 top-10 -left-12 w-[500px] h-[550px] rounded-large bgDots'/>
                 {/* Motion circles */}
@@ -44,7 +45,7 @@ const SignUp = () => {
                         ease: 'easeInOut',
                         duration: 5,
                     }}
-                    className='absolute top-0 right-[24%] sm:right-[52%] w-8 h-8 border-2 bg-accent rounded-full'>
+                    className='absolute top-0 right-0 w-8 h-8 border-2 bg-accent rounded-full'>
 
                     </motion.figure>
                     <motion.figure 
@@ -57,7 +58,7 @@ const SignUp = () => {
                         duration: 5,
                         delay: 0.5,
                     }}
-                    className='absolute top-0 right-[23%] sm:right-[51%] w-8 h-8 border-2 bg-primary rounded-full'>
+                    className='absolute top-0 right-2 w-8 h-8 border-2 bg-primary rounded-full'>
 
                     </motion.figure>
                     <motion.figure 
@@ -70,7 +71,7 @@ const SignUp = () => {
                         duration: 5,
                         delay: 0.9,
                     }}
-                    className='absolute top-0 right-[22%] sm:right-[50%] w-8 h-8 border-2 bg-bg-sand rounded-full'>
+                    className='absolute top-0 right-4 w-8 h-8 border-2 bg-bg-sand rounded-full'>
                     </motion.figure>
 
                 </div>
