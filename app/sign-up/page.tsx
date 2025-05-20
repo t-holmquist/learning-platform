@@ -9,7 +9,7 @@ import { motion } from 'motion/react';
 const SignUp = () => {
   return (
     // Dot background overflows on mobile -> overflow-x-hidden. No scroll on tablet and desktop -> h-100vh
-    <div className='font-satoshi sm:h-[100vh] overflow-hidden overflow-x-hidden'>
+    <div className='font-satoshi sm:h-[100vh] overflow-x-hidden'>
         <nav className='flex justify-between items-center py-2 px-6'>
             <Link href={"/"}>
                 <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' /> 
