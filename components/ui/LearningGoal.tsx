@@ -6,7 +6,7 @@ import { motion } from 'motion/react';
 
 const LearningGoal = () => {
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [learningGoal, setLearningGoal] = useState('Publish a game');
 
   const learningGoals = ['Publish a game', 'Learn something new', 'Learn game design'];
