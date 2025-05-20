@@ -7,17 +7,17 @@ const RecommendedLessons = () => {
     <div className="space-y-4">
         <section className="flex gap-6">
             {/* Cards */}
-            <div className="flex flex-col gap-4 p-6 justify-center border shadow-primaryRed rounded-small">
+            <div className="w-full sm:w-fit flex flex-col gap-4 p-6 justify-center border shadow-primaryRed rounded-small">
                 <p>Module: Rule Design</p>
                 <h3 className='text-xl font-bold'>Difficult rules simplified</h3>
                 <Button title="Learn now"/>
             </div>
-            <div className="flex flex-col gap-4 p-6 justify-center border shadow-primaryRed rounded-small">
+            <div className="hidden sm:flex flex-col gap-4 p-6 justify-center border shadow-primaryRed rounded-small">
                 <p>Module: Rule Design</p>
                 <h3 className='text-xl font-bold'>Difficult rules simplified</h3>
                 <Button title="Learn now"/>
             </div>
-            <div className="flex flex-col gap-4 p-6 justify-center border shadow-primaryRed rounded-small">
+            <div className="hidden sm:flex flex-col gap-4 p-6 justify-center border shadow-primaryRed rounded-small">
                 <p>Module: Rule Design</p>
                 <h3 className='text-xl font-bold'>Difficult rules simplified</h3>
                 <Button title="Learn now"/>
