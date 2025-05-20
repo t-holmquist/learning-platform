@@ -16,6 +16,7 @@
   --font-satoshi: satoshi, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --shadow-primary: -0.3rem 0.3rem 0px #180D06;
+  --shadow-primaryRed: -0.3rem 0.3rem 0px #C1A3FF;
 
   --radius-large: 1rem;
   --radius-small: 0.5rem;

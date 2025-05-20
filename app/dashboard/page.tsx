@@ -1,5 +1,7 @@
 import ContinueLessonCard from "@/components/ui/continueLessonCard";
+import LearningGoal from "@/components/ui/LearningGoal";
 import { ProgressBar } from "@/components/ui/progressBar";
+import RecommendedLessons from "@/components/ui/recommendedLessons";
 
 export default function Dashboard() {
   return (
@@ -14,8 +16,12 @@ export default function Dashboard() {
           <ContinueLessonCard />
           <h2 className="font-bold text-2xl">Total Course Progression</h2>
           <ProgressBar />
+          <h2 className="font-bold text-2xl">Other Lessons you might like</h2>
+          <RecommendedLessons />
         </div>
-        <aside>Learn goal and xp</aside>
+        <aside>
+          <LearningGoal />
+        </aside>
       </section>
       <footer className="w-full h-10 border text-center">
         Footer placeholder
