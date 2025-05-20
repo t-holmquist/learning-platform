@@ -15,7 +15,6 @@ const XpCard = () => {
             <h3 className='text-xl font-bold'>Next rank</h3>
             <p className="text-sm text-primary">Architect</p>
         </div>
-        <p>Publish a game</p>
     </div>
   )
 }
