@@ -1,8 +1,13 @@
+
+
 export default function Home() {
+  
   return (
-    <main className="flex flex-col gap-10 justify-center items-center min-h-screen">
-      <p className="text-center font-satoshi font-black text-5xl">Forside</p>
-      <a href="/sign-up" className="underline">Get started</a>
-    </main>
+    <div className="flex min-h-screen items-center justify-center">
+      <main className="flex flex-col items-center gap-4">
+       <h1 className="text-3xl font-extrabold">Welcome to BoardCraft Studio</h1>
+       <a href="/sign-in" className="px-4 py-2 bg-primary rounded-lg text-white">Get started</a>
+      </main>
+    </div>
   );
 }
