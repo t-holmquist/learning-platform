@@ -1,6 +1,7 @@
 'use client'
 
 import { lessonData } from '@/data/data';
+import Link from 'next/link';
 import { Dispatch, SetStateAction } from 'react';
 
 const Sidebar = ( {activeLesson, setActiveLesson} : {
@@ -12,7 +13,7 @@ const Sidebar = ( {activeLesson, setActiveLesson} : {
   return (
     <div className="hidden lg:block sticky top-0 w-[250px] border h-[100vh]">
       <div className='border-b flex items-center justify-center h-[50px]'>
-        <a href='/' className='font-extrabold text-xl'>BoardCraft Studio</a>
+        <Link href='/' className='font-extrabold text-xl'>BoardCraft Studio</Link>
       </div>
         <div className='bg-accent p-2 text-center font-medium border-b border-black'>Module: User Testing</div>
         <div className="flex flex-col">

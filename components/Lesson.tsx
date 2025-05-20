@@ -3,6 +3,7 @@ import { Dispatch, SetStateAction } from "react";
 import { lessonData } from "@/data/data";
 import IntroductionLesson from "./lessons/introductionLesson";
 import UserTestingLesson from "./lessons/userTestingLesson";
+import Link from "next/link";
 
 
 const Lesson = ( {activeLesson, setActiveLesson} : {
@@ -37,7 +38,7 @@ const Lesson = ( {activeLesson, setActiveLesson} : {
                 <div className="rounded-full w-10 h-10 border"></div>
             </div>
         </nav>
-        <a href="/" className="underline">Go to front page</a>
+        <Link href="/" className="underline">Go to front page</Link>
         {activeLesson == 0 && (
             <IntroductionLesson />
         )}
