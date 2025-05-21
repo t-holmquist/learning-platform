@@ -28,21 +28,21 @@ const RecommendedLessons = () => {
             {/* Cards */}
             <motion.div 
             variants={variants}
-            className="w-full sm:w-fit flex flex-col gap-4 p-6 justify-center border shadow-primaryRed rounded-small">
+            className="w-full sm:w-fit flex flex-col gap-4 p-6 justify-center border shadow-primary rounded-large">
                 <p>Module: Rule Design</p>
                 <h3 className='text-xl font-bold'>Difficult rules simplified</h3>
                 <Button title="Learn now"/>
             </motion.div>
             <motion.div 
             variants={variants}
-            className="hidden sm:flex flex-col gap-4 p-6 justify-center border shadow-primaryRed rounded-small">
+            className="hidden sm:flex flex-col gap-4 p-6 justify-center border shadow-primary rounded-large">
                 <p>Module: Rule Design</p>
                 <h3 className='text-xl font-bold'>Difficult rules simplified</h3>
                 <Button title="Learn now"/>
             </motion.div>
             <motion.div 
             variants={variants}
-            className="hidden sm:flex flex-col gap-4 p-6 justify-center border shadow-primaryRed rounded-small">
+            className="hidden sm:flex flex-col gap-4 p-6 justify-center border shadow-primary rounded-large">
                 <p>Module: Rule Design</p>
                 <h3 className='text-xl font-bold'>Difficult rules simplified</h3>
                 <Button title="Learn now"/>
