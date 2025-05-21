@@ -13,6 +13,8 @@ const NavBarDashboard = () => {
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
     const Notifications = ['Check out our latest course', 'This article might inspire you', 'Get started with user testing']
+    const Settings = ['Account', 'Settings', 'Theme']
+
 
   return (
     <nav className="hidden sm:flex justify-between items-center px-5 py-2 sm:py-5 sm:px-10 w-full text-center">
@@ -30,7 +32,7 @@ const NavBarDashboard = () => {
                             initial={{opacity: 0, y: 20}}
                             animate={{opacity: 1, y: 0}}
                             exit={{opacity: 0, y: 20}}
-                            className="absolute flex flex-col p-2 gap-2 -left-65 top-8 border bg-bg-sand rounded-small">
+                            className="absolute flex flex-col p-2 gap-2 -left-65 top-9 border bg-bg-sand rounded-small">
                             {Notifications.map((message, index) => (
                                 <div key={index} className="flex flex-col gap-2 text-start hover:bg-bg-green p-1 rounded-small">
                                     <div className="flex gap-2 items-center">
@@ -53,14 +55,12 @@ const NavBarDashboard = () => {
                             initial={{opacity: 0, y: 20}}
                             animate={{opacity: 1, y: 0}}
                             exit={{opacity: 0, y: 20}}
-                            className="absolute flex flex-col p-2 gap-2 -left-65 top-8 border bg-bg-sand rounded-small">
-                            {Notifications.map((message, index) => (
-                                <div key={index} className="flex flex-col gap-2 text-start hover:bg-bg-green p-1 rounded-small">
+                            className="absolute flex flex-col p-2 gap-2 -left-13 top-12 border bg-bg-sand rounded-small">
+                            {Settings.map((message, index) => (
+                                <div key={index} className="flex flex-col gap-2 text-start hover:bg-bg-green p-3 rounded-small">
                                     <div className="flex gap-2 items-center">
-                                        <div className={`${index == 0 && 'bg-red-500'} border w-1.5 h-1.5 rounded-full`}></div>
                                         <p className="text-sm font-medium ">{message}</p>
                                     </div>
-                                    <p className="text-xs font-light">This is a new Notifications about something interesting that is useful in a way</p>
                                 </div>
                                 ))}
                             </motion.div>
