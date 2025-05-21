@@ -15,7 +15,7 @@ export default function Dashboard() {
     // Justify-between avoids floating footer on x-large screens
     <div className="flex flex-col min-h-screen justify-between">
       <NavBarDashboard />
-      <section className="flex p-5 sm:px-10 sm:py-2 flex-col gap-8 lg:flex-row justify-between items-center">
+      <section className="flex px-5 sm:px-10 py-2 flex-col gap-8 lg:flex-row justify-between items-center">
         <div className="flex flex-col gap-8">
           <div className="relative">
             <h1 className="font-black text-3xl sm:text-6xl">Welcome back, Mathias</h1>
