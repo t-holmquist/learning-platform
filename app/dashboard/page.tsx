@@ -14,7 +14,7 @@ export default function Dashboard() {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBarDashboard />
-      <section className="flex p-5 sm:p-10 flex-col gap-8 sm:flex-row justify-between items-center">
+      <section className="flex p-5 sm:px-10 sm:py-2 flex-col gap-8 sm:flex-row justify-between items-center">
         <div className="flex flex-col gap-8">
           <div className="relative">
             <h1 className="font-black text-3xl sm:text-6xl">Welcome back, Mathias</h1>

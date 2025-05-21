@@ -8,7 +8,7 @@ const Footer = () => {
 
 
   return (
-   <footer className="mb-20 sm:mb-0 flex flex-col sm:flex-row gap-8 sm:gap-0 w-full p-8 justify-between items-center border-t border-t-bg-green">
+   <footer className="mt-8 mb-20 sm:mb-0 rounded-t-large flex flex-col sm:flex-row gap-8 sm:gap-0 w-full p-8 justify-between items-center border-t border-t-bg-green">
     <Link href={"/"}>
         <Image src={"/icons/Logo.svg"} width={130} height={100} alt="Logo"/>
     </Link>
