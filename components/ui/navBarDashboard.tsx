@@ -24,7 +24,7 @@ const NavBarDashboard = () => {
         <div className="flex items-center gap-4 font-bold">
             <button className="hidden sm:block cursor-pointer hover:text-slate-700">Course</button>
             <button className="hidden sm:block cursor-pointer hover:text-slate-700">Design Assets</button>
-            <button onClick={() => {setIsNotificationOpen(!isNotificationOpen)}} className="relative cursor-pointer">
+            <button onClick={() => {setIsNotificationOpen(!isNotificationOpen); setIsSettingsOpen(false)}} className="relative cursor-pointer">
                 <Image className="hidden sm:block" src={"/icons/bell.svg"} width={20} height={20} alt="notifications"/>
                 {/* Mobile bell */}
                 <Image className="sm:hidden" src={"/icons/bell.svg"} width={30} height={20} alt="notifications"/>
@@ -49,7 +49,7 @@ const NavBarDashboard = () => {
                     )}
                 </AnimatePresence>
             </button>
-            <button onClick={() => {setIsSettingsOpen(!isSettingsOpen)}} className="hidden sm:block relative border rounded-full cursor-pointer">
+            <button onClick={() => {setIsSettingsOpen(!isSettingsOpen); setIsNotificationOpen(false)}} className="hidden sm:block relative border rounded-full cursor-pointer">
                 <Image src={"/mathias.webp"} width={45} height={45} alt="notifications"/>
                 <AnimatePresence>
                     {isSettingsOpen && (
