@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'motion/react';
 import MotionCircles from '@/components/ui/motionCircles';
+import Footer from '@/components/ui/footer';
 
 
 const SignUp = () => {
@@ -70,6 +71,7 @@ const SignUp = () => {
                 </div>
             </motion.div>
         </section>
+        <Footer/>
     </div>
   )
 }

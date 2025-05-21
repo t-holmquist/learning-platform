@@ -1,5 +1,6 @@
 import Achievements from "@/components/ui/achievements";
 import ContinueLessonCard from "@/components/ui/continueLessonCard";
+import Footer from "@/components/ui/footer";
 import LearningGoal from "@/components/ui/LearningGoal";
 import MotionCircles from "@/components/ui/motionCircles";
 import NavBarDashboard from "@/components/ui/navBarDashboard";
@@ -35,6 +36,7 @@ export default function Dashboard() {
           <Achievements />
         </aside>
       </section>
+      <Footer />
     </div>
   );
 }
