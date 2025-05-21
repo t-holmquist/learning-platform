@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
+import MobileTabNav from "@/components/ui/mobileTabNav";
 
 const satoshi = localFont({
   src: '/fonts/Satoshi-Variable.ttf',
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body
         className={`${satoshi.variable} antialiased bg-bg-sand`}
       >
+         <MobileTabNav />
         {children}
       </body>
     </html>
