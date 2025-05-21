@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const Achievements = () => {
   return (
-    <section className="flex flex-col gap-8">
+    <section className="flex flex-col gap-6">
         <h2 className="font-bold text-2xl">Latest Achievements</h2>
         <div className="flex gap-4">
           <div className="flex flex-col items-center gap-2">
@@ -25,7 +25,7 @@ const Achievements = () => {
             <p className="text-xs sm:text-sm">Generated 1 idea</p>
           </div>
         </div>
-         <button className="flex gap-2 cursor-pointer hover:text-slate-700">
+         <button className="flex gap-2 border cursor-pointer hover:bg-bg-sandHover p-2 rounded-small w-fit bg-bg-sand">
             <p className="text-sm">See all achievements</p>
         </button>
         

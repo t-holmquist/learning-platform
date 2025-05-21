@@ -4,7 +4,7 @@ import Button from "./button";
 
 const RecommendedLessons = () => {
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
         <section className="flex gap-6">
             {/* Cards */}
             <div className="w-full sm:w-fit flex flex-col gap-4 p-6 justify-center border shadow-primaryRed rounded-small">
@@ -24,8 +24,8 @@ const RecommendedLessons = () => {
             </div>
         </section>
         {/* Shuffle */}
-        <button className="flex gap-2 cursor-pointer hover:text-slate-700">
-            <p className="text-sm">Shuffle lessons</p>
+        <button className="flex gap-2 cursor-pointer border hover:bg-bg-sandHover p-2 rounded-small w-fit bg-bg-sand">
+            <p className="">Shuffle lessons</p>
             <Image src={"/icons/shuffle.svg"} alt="shuffle lessons" width={15} height={15}/>
         </button>
     </div>
