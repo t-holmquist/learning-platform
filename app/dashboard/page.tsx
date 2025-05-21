@@ -35,9 +35,6 @@ export default function Dashboard() {
           <Achievements />
         </aside>
       </section>
-      <footer className="w-full h-10 border text-center">
-        Footer placeholder
-      </footer>
     </div>
   );
 }
