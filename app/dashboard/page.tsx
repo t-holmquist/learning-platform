@@ -2,16 +2,17 @@ import Achievements from "@/components/ui/achievements";
 import ContinueLessonCard from "@/components/ui/continueLessonCard";
 import LearningGoal from "@/components/ui/LearningGoal";
 import MotionCircles from "@/components/ui/motionCircles";
+import NavBarDashboard from "@/components/ui/navBarDashboard";
 import { ProgressBar } from "@/components/ui/progressBar";
 import RecommendedLessons from "@/components/ui/recommendedLessons";
 import XpCard from "@/components/ui/xpCard";
 
+
+
 export default function Dashboard() {
   return (
     <div className="flex flex-col min-h-screen">
-      <nav className="hidden sm:block w-full h-10 border text-center">
-        Navbar placeholder
-      </nav>
+      <NavBarDashboard />
       <section className="flex p-5 sm:p-10 flex-col gap-8 sm:flex-row justify-between items-center">
         <div className="flex flex-col gap-8">
           <div className="relative">
