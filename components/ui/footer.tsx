@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 
 const Footer = () => {
@@ -8,13 +9,15 @@ const Footer = () => {
 
   return (
    <footer className="mb-20 sm:mb-0 flex flex-col sm:flex-row gap-8 sm:gap-0 w-full p-8 justify-between items-center border-t border-t-bg-green">
-    <Image src={"/icons/Logo.svg"} width={130} height={100} alt="Logo"/>
+    <Link href={"/"}>
+        <Image src={"/icons/Logo.svg"} width={130} height={100} alt="Logo"/>
+    </Link>
     <div className="flex gap-8">
         {footerItems.map((item, idx) => (
             <button key={idx} className="hover:text-slate-700 cursor-pointer text-xs">{item}</button>
         ))}
     </div>
-    <p className="text-xs">Copyright © BoardCraft Studio</p>
+        <p className="text-xs">Copyright © BoardCraft Studio</p>
    </footer>
   )
 }

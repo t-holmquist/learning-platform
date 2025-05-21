@@ -22,8 +22,8 @@ const NavBarDashboard = () => {
             <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' />
         </Link>
         <div className="flex items-center gap-4 font-bold">
-            <button className="hidden sm:block cursor-pointer hover:text-slate-700">Course</button>
-            <button className="hidden sm:block cursor-pointer hover:text-slate-700">Design Assets</button>
+            <button className="hidden sm:block cursor-pointer hover:text-slate-600">Course</button>
+            <button className="hidden sm:block cursor-pointer hover:text-slate-600">Design Assets</button>
             <button onClick={() => {setIsNotificationOpen(!isNotificationOpen); setIsSettingsOpen(false)}} className="relative cursor-pointer">
                 <Image className="hidden sm:block" src={"/icons/bell.svg"} width={20} height={20} alt="notifications"/>
                 {/* Mobile bell */}

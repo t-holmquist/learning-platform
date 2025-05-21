@@ -25,7 +25,7 @@ const RecommendedLessons = () => {
         </section>
         {/* Shuffle */}
         <button className="flex gap-2 cursor-pointer border hover:bg-bg-sandHover p-2 rounded-small w-fit bg-bg-sand">
-            <p className="">Shuffle lessons</p>
+            <p className="text-sm">Shuffle lessons</p>
             <Image src={"/icons/shuffle.svg"} alt="shuffle lessons" width={15} height={15}/>
         </button>
     </div>
