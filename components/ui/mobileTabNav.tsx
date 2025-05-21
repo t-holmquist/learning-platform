@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 
 const MobileTabNav = () => {
 
-  let pathName = usePathname();
+  const pathName = usePathname();
 
 
   
