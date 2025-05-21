@@ -24,7 +24,7 @@ const LearningGoal = () => {
     <div className='flex flex-col px-4 p-8 gap-4 border rounded-large bg-bg-green shadow-primary'>
         {/* Overlay */}
         {isOpen && (
-          <div className="flex items-center justify-center fixed inset-0 overflow-hidden bg-black/30">
+          <div className="flex items-center justify-center fixed inset-0 overflow-hidden bg-black/40">
             {/* Select menu */}
             <motion.div 
             initial={{y: 20, rotate: 5}}
