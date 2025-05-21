@@ -7,6 +7,7 @@ import NavBarDashboard from "@/components/ui/navBarDashboard";
 import { ProgressBar } from "@/components/ui/progressBar";
 import RecommendedLessons from "@/components/ui/recommendedLessons";
 import XpCard from "@/components/ui/xpCard";
+import Image from "next/image";
 
 
 
@@ -14,7 +15,7 @@ export default function Dashboard() {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBarDashboard />
-      <section className="flex p-5 sm:px-10 sm:py-2 flex-col gap-8 sm:flex-row justify-between items-center">
+      <section className="flex p-5 sm:px-10 sm:py-2 flex-col gap-8 lg:flex-row justify-between items-center">
         <div className="flex flex-col gap-8">
           <div className="relative">
             <h1 className="font-black text-3xl sm:text-6xl">Welcome back, Mathias</h1>
@@ -30,7 +31,7 @@ export default function Dashboard() {
           <h2 className="font-bold text-2xl">Other Lessons you might like</h2>
           <RecommendedLessons />
         </div>
-        <aside className="flex flex-col gap-8 w-full sm:w-fit">
+        <aside className="flex flex-col gap-8 w-full lg:w-fit">
           <LearningGoal />
           <XpCard />
           <Achievements />
