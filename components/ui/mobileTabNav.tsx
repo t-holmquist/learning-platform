@@ -1,12 +1,19 @@
 'use client'
 
+import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image"
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
+import { useState } from "react";
 
 const MobileTabNav = () => {
 
   const pathName = usePathname();
+
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  
+  
+  const Settings = ['Account', 'Settings', 'Theme']
 
 
   
@@ -29,9 +36,26 @@ const MobileTabNav = () => {
           <path d="M124.25 1H88C83.9959 1 80.75 4.24594 80.75 8.25V44.5C80.75 48.5041 83.9959 51.75 88 51.75H124.25C128.254 51.75 131.5 48.5041 131.5 44.5V8.25C131.5 4.24594 128.254 1 124.25 1Z" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M51.75 131.5V37.25C51.75 35.3272 50.9862 33.4831 49.6265 32.1235C48.2669 30.7638 46.4228 30 44.5 30H8.25C6.32718 30 4.48311 30.7638 3.12348 32.1235C1.76384 33.4831 1 35.3272 1 37.25V124.25C1 126.173 1.76384 128.017 3.12348 129.377C4.48311 130.736 6.32718 131.5 8.25 131.5H95.25C97.1728 131.5 99.0169 130.736 100.377 129.377C101.736 128.017 102.5 126.173 102.5 124.25V88C102.5 86.0772 101.736 84.2331 100.377 82.8735C99.0169 81.5138 97.1728 80.75 95.25 80.75H1" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          <div className={`${pathName == '/account' ? 'border-primary border rounded-full' : 'border rounded-full'}`}>
-            <Image src={"/mathias.webp"} width={40} height={40} alt="account"/>
-          </div>
+          <button onClick={() => {setIsSettingsOpen(!isSettingsOpen)}} className="relative border rounded-full cursor-pointer">
+              <Image src={"/mathias.webp"} width={45} height={45} alt="account"/>
+              <AnimatePresence>
+                  {isSettingsOpen && (
+                          <motion.div 
+                          initial={{opacity: 0, y: 20}}
+                          animate={{opacity: 1, y: 0}}
+                          exit={{opacity: 0, y: 20}}
+                          className="absolute flex flex-col px-4 gap-2 -top-50 -left-14 border bg-bg-sand rounded-small">
+                          {Settings.map((message, index) => (
+                              <div key={index} className="flex flex-col gap-2 text-start hover:bg-bg-green p-3 rounded-small">
+                                  <div className="flex gap-2 items-center">
+                                      <p className="text-lg font-medium ">{message}</p>
+                                  </div>
+                              </div>
+                              ))}
+                          </motion.div>
+                  )}
+              </AnimatePresence>
+          </button>
         </div>
     </div>
   )
