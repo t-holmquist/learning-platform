@@ -7,13 +7,13 @@ import NavBarDashboard from "@/components/ui/navBarDashboard";
 import { ProgressBar } from "@/components/ui/progressBar";
 import RecommendedLessons from "@/components/ui/recommendedLessons";
 import XpCard from "@/components/ui/xpCard";
-import Image from "next/image";
-
 
 
 export default function Dashboard() {
+
   return (
-    <div className="flex flex-col min-h-screen">
+    // Justify-between avoids floating footer on x-large screens
+    <div className="flex flex-col min-h-screen justify-between">
       <NavBarDashboard />
       <section className="flex p-5 sm:px-10 sm:py-2 flex-col gap-8 lg:flex-row justify-between items-center">
         <div className="flex flex-col gap-8">
