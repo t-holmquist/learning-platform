@@ -4,6 +4,7 @@ import { lessonData } from "@/data/data";
 import IntroductionLesson from "./lessons/introductionLesson";
 import UserTestingLesson from "./lessons/userTestingLesson";
 import NavBarCourse from "./ui/navBarCourse";
+import ComingSoon from "./lessons/comingSoon";
 
 
 const Lesson = ( {activeLesson, setActiveLesson} : {
@@ -26,13 +27,16 @@ const Lesson = ( {activeLesson, setActiveLesson} : {
 
 
   return (
-    <div className="flex relative flex-col w-full items-center gap-4">
+    <div className="flex relative flex-col w-full items-center">
         <NavBarCourse activeLesson={activeLesson} />
         {activeLesson == 0 && (
             <IntroductionLesson />
         )}
         {activeLesson == 1 && (
             <UserTestingLesson />
+        )}
+        {activeLesson > 2 && (
+            <ComingSoon />
         )}
         <button 
         onClick={() => {handleComplete()}}
