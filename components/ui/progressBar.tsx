@@ -19,7 +19,7 @@ export const ProgressBar = ( { completedLessons } : {
     } 
   }
 
-  const defaultCompletedLessons = Math.floor((lessonsCompleted / totalLessons) * 100 ).toString()
+  const staticCompletedLessons = Math.floor((lessonsCompleted / totalLessons) * 100 ).toString()
   
   return (
     <div className="flex shadow-primary rounded-large">
@@ -28,7 +28,7 @@ export const ProgressBar = ( { completedLessons } : {
           width: '0%'
         }}
         animate={{
-          width: `${completedLessons ? `${completedLessons}` : `${defaultCompletedLessons}`}%`
+          width: `${completedLessons ? `${completedLessons}` : `${staticCompletedLessons}`}%`
         }}  
         transition={{
           type: 'spring',
@@ -36,7 +36,7 @@ export const ProgressBar = ( { completedLessons } : {
           bounce: 0.3,
         }}
         className="bg-secondary rounded-l-xl p-3 border">
-          <p className="text-black font-bold">{completedLessons ? `${completedLessons}` : `${defaultCompletedLessons}`}%</p>
+          <p className="text-black font-bold">{completedLessons ? `${completedLessons}` : `${staticCompletedLessons}`}%</p>
         </motion.div>
         {/* Flex 1 allows the dot div to shrink and grow regardless of initial width */}
         <div className="flex-1 border bgDots border-black rounded-r-xl"></div>

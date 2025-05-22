@@ -3,7 +3,6 @@ import { Dispatch, SetStateAction } from "react";
 import { lessonData } from "@/data/data";
 import IntroductionLesson from "./lessons/introductionLesson";
 import UserTestingLesson from "./lessons/userTestingLesson";
-import Link from "next/link";
 import NavBarCourse from "./ui/navBarCourse";
 
 
