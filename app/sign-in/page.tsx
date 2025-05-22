@@ -12,7 +12,7 @@ const SignUp = () => {
   return (
     // Dot background overflows on mobile -> overflow-x-hidden. No scroll on tablet and desktop -> h-100vh
     <div className='font-satoshi sm:min-h-screen flex flex-col justify-between overflow-x-hidden'>
-        <nav className='flex justify-between items-center py-2 px-6'>
+        <nav className='flex justify-between items-center px-5 py-5 sm:px-10'>
             <Link href={"/"}>
                 <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' /> 
             </Link>
