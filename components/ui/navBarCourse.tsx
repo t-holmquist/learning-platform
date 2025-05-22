@@ -3,10 +3,14 @@
 import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from 'motion/react';
+import { lessonData } from "@/data/data";
 
 
 
-const NavBarCourse = () => {
+const NavBarCourse = ( { activeLesson } : {
+
+    activeLesson: number;
+} ) => {
 
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -17,7 +21,7 @@ const NavBarCourse = () => {
 
   return (
     <nav className="flex justify-between items-center h-[72px] px-5 w-full text-center border-t border-b">
-        <p>Lektionsinfo</p>
+        <p>{lessonData[activeLesson].title}</p>
         <div className="flex items-center gap-4 font-bold">
             <button className="hidden sm:block cursor-pointer hover:text-slate-600">Course</button>
             <button className="hidden sm:block cursor-pointer hover:text-slate-600">Design Assets</button>

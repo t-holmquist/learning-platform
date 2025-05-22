@@ -16,6 +16,9 @@ const Lesson = ( {activeLesson, setActiveLesson} : {
     const handleComplete = () => {
         
         if (activeLesson < lessonData.length - 1) {
+            // Set current lesson complete property to true
+            lessonData[activeLesson].completed = true;
+            // Move one step forward in the lessons
             setActiveLesson(activeLesson + 1)
         } else {
             return
@@ -25,7 +28,7 @@ const Lesson = ( {activeLesson, setActiveLesson} : {
 
   return (
     <div className="flex flex-col w-full items-center gap-4">
-        <NavBarCourse />
+        <NavBarCourse activeLesson={activeLesson} />
         <Link href="/" className="underline">Go to front page</Link>
         {activeLesson == 0 && (
             <IntroductionLesson />
@@ -35,7 +38,7 @@ const Lesson = ( {activeLesson, setActiveLesson} : {
         )}
         <button 
         onClick={() => {handleComplete()}}
-        className="cursor-pointer mb-20 bg-slate-800 px-4 py-2 rounded-lg text-white hover:bg-slate-600">{activeLesson == lessonData.length - 1 ? 'Finish Module' : 'Complete Lesson'}</button>
+        className="cursor-pointer font-bold bg-primary px-4 py-2 rounded-small text-white hover:bg-primaryHover">{activeLesson == lessonData.length - 1 ? 'Finish Module' : 'Complete Lesson'}</button>
     </div>
   )
 }

@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${satoshi.variable} antialiased bg-bg-sand`}
+        className={`${satoshi.variable} antialiased bg-bg-sand font-satoshi`}
       >
          <MobileTabNav />
         {children}
