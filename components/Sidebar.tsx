@@ -34,7 +34,7 @@ const Sidebar = ( {activeLesson, setActiveLesson} : {
 
   return (
     // Needs a height and an overflow-y-auto to make it scrollable if larger than screen
-    <div className="hidden lg:block sticky top-0 h-screen overflow-y-auto w-[300px] border">
+    <div className="hidden lg:block sticky top-0 h-screen customScrollbar overflow-y-auto w-[300px] border">
       <Link className='flex items-center justify-center h-[70px]' href={"/"}>
             <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' />
       </Link>
