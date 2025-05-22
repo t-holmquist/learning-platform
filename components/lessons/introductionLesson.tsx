@@ -1,3 +1,4 @@
+import KnowledgeTest from "../ui/knowledgeTest";
 
 
 const IntroductionLesson = () => {
@@ -25,6 +26,8 @@ const IntroductionLesson = () => {
               <p>Handling user feedback effectively is essential for any organization aiming to improve its products or services. The first step is to actively collect feedback through various channels such as surveys, social media, and direct communication. Once gathered, it's crucial to categorize and analyze the feedback to identify common themes and areas for improvement. Prioritizing feedback based on its impact and feasibility allows organizations to address the most critical issues first. </p>
               <p>Transparent communication with users about the changes being implemented as a result of their feedback fosters trust and shows that their input is valued. Additionally, creating a feedback loop where users are informed about the actions taken can enhance user satisfaction and loyalty. By systematically handling user feedback, organizations can drive continuous improvement and deliver products that truly meet user needs.</p>
             </div>
+            {/* Test */}
+            <KnowledgeTest/>
           </section>
       </div>
     </section>
