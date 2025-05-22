@@ -3,9 +3,10 @@
 import { motion } from 'motion/react'
 
 
-export const ProgressBar = () => {
+export const ProgressBar = ( { completedLessons } : {
+  completedLessons: string;
+} ) => {
   
-// Here it should calculate the amount of completed lessons in LessonData and update the width value
   // const [progress, setProgress] = useState(45);
   
   return (
@@ -15,7 +16,7 @@ export const ProgressBar = () => {
           width: '0%'
         }}
         animate={{
-          width: `40%`
+          width: `${completedLessons}%`
         }}  
         transition={{
           type: 'spring',
@@ -23,7 +24,7 @@ export const ProgressBar = () => {
           bounce: 0.3,
         }}
         className="bg-secondary rounded-l-xl p-3 border">
-          <p className="text-black font-bold">40%</p>
+          <p className="text-black font-bold">{completedLessons}%</p>
         </motion.div>
         {/* Flex 1 allows the dot div to shrink and grow regardless of initial width */}
         <div className="flex-1 border bgDots border-black rounded-r-xl"></div>

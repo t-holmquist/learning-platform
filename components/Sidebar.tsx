@@ -2,21 +2,42 @@
 
 import { lessonData } from '@/data/data';
 import Link from 'next/link';
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import Image from 'next/image';
+import { ProgressBar } from './ui/progressBar';
 
 const Sidebar = ( {activeLesson, setActiveLesson} : {
   activeLesson: number;
   setActiveLesson: Dispatch<SetStateAction<number>>
 } ) => {
 
+  const [completedLessons, setCompletedLessons] = useState("0");
+
+  // Calculates the percentage of completed lessons and give the data to progress bar every time activeless changes
+  useEffect(() => {
+
+    let lessonsCompleted = 0;
+    const totalLessons = lessonData.length;
+
+    // Get the current completed and uncompleted lessons and them to the variables above
+    for (let i = 0; i < lessonData.length; i++) {
+      if (lessonData[i].completed) {
+        lessonsCompleted += 1
+      } 
+    }
+
+    setCompletedLessons(Math.floor((lessonsCompleted / totalLessons) * 100 ).toString()) 
+
+  }, [activeLesson])
+
+
 
   return (
-    <div className="hidden lg:block sticky top-0 w-[300px] border h-[100vh]">
+    <div className="hidden lg:block sticky top-0 w-[300px] border">
       <Link className='flex items-center justify-center h-[70px]' href={"/"}>
             <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' />
       </Link>
-      <div className='bg-secondary p-2 text-center font-medium border border-black'>Module: Introduction</div>
+      <div className='bg-secondary p-2 text-center font-medium border border-black'>Module: The basics</div>
       <section className="flex flex-col">
         {lessonData.slice(0, 3).map(({id, title}, idx) => (
           <button 
@@ -89,6 +110,13 @@ const Sidebar = ( {activeLesson, setActiveLesson} : {
             </div>
           </button>
         ))}
+      </section>
+      {/* Course progression section */}
+      <section className='flex flex-col gap-4 border-t p-4'>
+        <h3 className='text-lg font-bold'>Course Progression</h3>
+        <ProgressBar completedLessons={completedLessons} />
+        {/* Calculate the ratio of completed lessons. Parseint chosen since the state is set to a string. Could be refactored to a number */}
+        <p>{`${Math.round(lessonData.length / 100 * parseInt(completedLessons)) } of ${lessonData.length} lessons completed`}</p>
       </section>
 
     </div>

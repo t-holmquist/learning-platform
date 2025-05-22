@@ -1,7 +1,7 @@
 export const lessonData = [
     {
         id: 0,
-        title: 'Introduction to user testing',
+        title: 'Introduction to the course',
         completed: true,
     },
     {
