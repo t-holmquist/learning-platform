@@ -27,7 +27,7 @@ const Lesson = ( {activeLesson, setActiveLesson} : {
 
 
   return (
-    <div className="flex flex-col w-full items-center gap-4">
+    <div className="flex relative flex-col w-full items-center gap-4">
         <NavBarCourse activeLesson={activeLesson} />
         <Link href="/" className="underline">Go to front page</Link>
         {activeLesson == 0 && (
