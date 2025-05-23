@@ -2,12 +2,12 @@ export const lessonData = [
     {
         id: 0,
         title: 'Introduction to the course',
-        completed: true,
+        completed: false,
     },
     {
         id: 1,
         title: 'How to approach testing real users',
-        completed: true,
+        completed: false,
     },
     {
         id: 2,
@@ -27,7 +27,7 @@ export const lessonData = [
         {
         id: 5,
         title: 'Introduction to user testing',
-        completed: false,
+        completed: true,
     },
     {
         id: 6,

@@ -57,7 +57,7 @@ const KnowledgeTest = () => {
   return (
     <section className="flex flex-col gap-6 bg-bg-green p-8  rounded-large border">
         <h2 className="font-bold text-2xl p-2 border w-fit rounded-small shadow-primary">Test your knowledge</h2>
-        <h3 className="font-bold text-lg max-w-md">Which of the following is a crucial step in effectively handling user feedback?</h3>
+        <h3 className="font-bold sm:text-2xl max-w-md">Which of the following is a crucial step in effectively handling user feedback?</h3>
         {questions.map(( {id, title}, idx) => (
             <button key={idx} onClick={() => {handleAnswer(id)}} className={`border text-sm sm:text-base hover:bg-bg-sandHover p-2 cursor-pointer  rounded-small bg-bg-sand`}>
                 <p>{title}</p>
