@@ -1,4 +1,5 @@
 import KnowledgeTest from "../ui/knowledgeTest";
+import { Video } from "../ui/video";
 
 
 const IntroductionLesson = () => {
@@ -8,7 +9,7 @@ const IntroductionLesson = () => {
           {/* Video and title */}
           <div className='space-y-6'>
             <h1 className='text-3xl sm:text-6xl font-black'>Introduction video</h1>
-            <div className='border shadow-primary bg-bg-green rounded-large aspect-video'></div>
+            <Video/>
           </div>
           {/* Content */}
           <section className="flex flex-col items-center py-10 lg:px-10 lg:py-20 gap-16">
