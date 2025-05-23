@@ -20,7 +20,7 @@ const NavBarCourse = ( { activeLesson } : {
 
 
   return (
-    <nav className="flex sticky top-0 justify-between bg-bg-sand items-center h-[72px] px-5 w-full text-center border-t border-b">
+    <nav className="flex sticky top-0 z-50 justify-between bg-bg-sand items-center h-[72px] px-5 w-full text-center border-t border-b">
         <p>{lessonData[activeLesson].title}</p>
         <div className="flex items-center gap-4 font-bold">
             <button className="hidden sm:block cursor-pointer hover:text-slate-600">Course</button>

@@ -50,7 +50,7 @@ const NavBarDashboard = () => {
                 </AnimatePresence>
             </button>
             <button onClick={() => {setIsSettingsOpen(!isSettingsOpen); setIsNotificationOpen(false)}} className="hidden sm:block relative border rounded-full cursor-pointer">
-                <Image src={"/mathias.webp"} width={45} height={45} alt="notifications"/>
+                <Image src={"/mathias.webp"} width={45} height={45} alt="portrait"/>
                 <AnimatePresence>
                     {isSettingsOpen && (
                             <motion.div 
