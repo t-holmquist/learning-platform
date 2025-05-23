@@ -56,10 +56,10 @@ const KnowledgeTest = () => {
 
   return (
     <section className="flex flex-col gap-6 bg-bg-green p-8  rounded-large border">
-        <h2 className="font-bold text-2xl p-2 border w-fit rounded-small shadow-primaryRed">Test your knowledge</h2>
+        <h2 className="font-bold text-2xl p-2 border w-fit rounded-small shadow-primary">Test your knowledge</h2>
         <h3 className="font-bold text-lg max-w-md">Which of the following is a crucial step in effectively handling user feedback?</h3>
-        {questions.map(( {id, title, correct}, idx) => (
-            <button key={idx} onClick={() => {handleAnswer(id)}} className={'border p-2 cursor-pointer rounded-small bg-bg-sand'}>
+        {questions.map(( {id, title}, idx) => (
+            <button key={idx} onClick={() => {handleAnswer(id)}} className={`border text-sm sm:text-base hover:bg-bg-sandHover p-2 cursor-pointer  rounded-small bg-bg-sand`}>
                 <p>{title}</p>
             </button>
         ))}
@@ -69,6 +69,7 @@ const KnowledgeTest = () => {
                 <motion.p
                 initial={{opacity: 0, y: 10}}
                 animate={{opacity: 1, y: 0}}
+                className="text-lg font-bold text-primary"
                 >{isCorrect ? 'You are correct!' : 'Not correct, try again later'}</motion.p>
                 <button onClick={() => {restart()}} className="flex gap-2 border bg-bg-sand w-fit py-1 px-2 rounded-small cursor-pointer">
                     <p className="text-sm">Restart quiz</p>
