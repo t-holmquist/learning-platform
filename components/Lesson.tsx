@@ -14,7 +14,8 @@ const Lesson = ( {activeLesson, setActiveLesson} : {
 
   return (
     <div className="flex relative flex-col w-full items-center">
-        <NavBarCourse activeLesson={activeLesson} />
+        {/* Mobile sidebar inside navbarCourse. NavbarCourse gives activelesson to sidebar */}
+        <NavBarCourse activeLesson={activeLesson} setActiveLesson={setActiveLesson} />
         {activeLesson == 0 && (
             <IntroductionLesson activeLesson={activeLesson} setActiveLesson={setActiveLesson} />
         )}

@@ -1,19 +1,24 @@
 'use client'
 
 import Image from "next/image";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { AnimatePresence, motion } from 'motion/react';
 import { lessonData } from "@/data/data";
+import MobileSidebar from "../mobileSidebar";
 
 
 
-const NavBarCourse = ( { activeLesson } : {
+const NavBarCourse = ( { activeLesson, setActiveLesson} : {
 
     activeLesson: number;
+    setActiveLesson: Dispatch<SetStateAction<number>>
 } ) => {
 
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+
+    //  Sidebar open or closed state
+    const [isOpen, setIsOpen] = useState(false);
 
     const Notifications = ['Check out our latest course', 'This article might inspire you', 'Get started with user testing']
     const Settings = ['Account', 'Settings', 'Theme']
@@ -21,21 +26,28 @@ const NavBarCourse = ( { activeLesson } : {
 
   return (
     <nav className="flex sticky top-0 z-50 justify-between bg-bg-sand items-center h-[72px] px-5 w-full text-center border-t border-b">
+        {/* Mobile only sidebar */}
+        {/* It receives the ability to open or close itself */}
+        <MobileSidebar activeLesson={activeLesson} setActiveLesson={setActiveLesson} isOpen={isOpen} setIsOpen={setIsOpen}/> 
         <p>{lessonData[activeLesson].title}</p>
-        <div className="flex items-center gap-4 font-bold">
+        <div className="flex items-center gap-6 sm:gap-4 font-bold">
             <button className="hidden sm:block cursor-pointer hover:text-slate-600">Course</button>
             <button className="hidden sm:block cursor-pointer hover:text-slate-600">Design Assets</button>
+            {/* Sidebar state button */}
+            <button onClick={() => {setIsOpen(!isOpen)}} className='lg:hidden border bg-bg-green p-2 rounded-full'>
+                <Image src={"/icons/list.svg"} width={30} height={30} alt='open close sidebar'/>
+            </button>
             <button onClick={() => {setIsNotificationOpen(!isNotificationOpen); setIsSettingsOpen(false)}} className="relative cursor-pointer">
                 <Image className="hidden sm:block" src={"/icons/bell.svg"} width={20} height={20} alt="notifications"/>
                 {/* Mobile bell */}
-                <Image className="sm:hidden" src={"/icons/bell.svg"} width={30} height={20} alt="notifications"/>
+                <Image className="sm:hidden" src={"/icons/bell.svg"} width={30} height={30} alt="notifications"/>
                 <AnimatePresence>
                     {isNotificationOpen && (
                             <motion.div 
                             initial={{opacity: 0, y: 20}}
                             animate={{opacity: 1, y: 0}}
                             exit={{opacity: 0, y: 20}}
-                            className="absolute flex flex-col p-2 gap-2 -left-65 top-9 border bg-bg-sand z-20 rounded-small">
+                            className="absolute flex flex-col p-2 gap-2 -left-65 top-9 border bg-bg-sand z-50 rounded-small">
                             {Notifications.map((message, index) => (
                                 <div key={index} className="flex flex-col gap-2 text-start hover:bg-bg-green p-1 rounded-small">
                                     <div className="flex gap-2 items-center">
