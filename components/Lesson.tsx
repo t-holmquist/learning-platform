@@ -23,7 +23,7 @@ const Lesson = ( {activeLesson, setActiveLesson} : {
             <UserTestingLesson />
         )}
         {activeLesson > 2 && (
-            <ComingSoon />
+            <ComingSoon activeLesson={activeLesson} setActiveLesson={setActiveLesson} />
         )}
     </div>
   )
