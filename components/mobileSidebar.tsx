@@ -58,7 +58,7 @@ const MobileSidebar = ( {activeLesson, setActiveLesson, isOpen, setIsOpen} : {
           x: '-100%'
         }}
         
-        className={`lg:hidden ${!isOpen ? 'hidden' : 'block'} fixed w-[85%] top-0 left-0 z-50 bg-bg-sand customScrollbar h-screen overflow-y-auto border`}>
+        className={`lg:hidden ${!isOpen ? 'hidden' : 'block'} fixed md:w-[40%] w-[85%] top-0 left-0 z-50 bg-bg-sand customScrollbar h-screen overflow-y-auto border`}>
           <button onClick={() => {setIsOpen(!isOpen)}} className='flex items-center justify-between px-4 w-full h-[70px]'>
             <Link href={"/"}>
                 <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' />

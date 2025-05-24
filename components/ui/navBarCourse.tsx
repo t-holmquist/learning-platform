@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { AnimatePresence, motion } from 'motion/react';
 import { lessonData } from "@/data/data";
 import MobileSidebar from "../mobileSidebar";
@@ -20,12 +20,34 @@ const NavBarCourse = ( { activeLesson, setActiveLesson} : {
     //  Sidebar open or closed state
     const [isOpen, setIsOpen] = useState(false);
 
+
+
+    // This hook is used to prevent scrolling on the lesson content when the sidebar is open which causes annoying UX on mobile
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add('overflow-hidden');
+        } else {
+            document.body.classList.remove('overflow-hidden');
+        }
+        
+        // unmount, then remove the class
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+        };
+    }, [isOpen]);
+
+
+
     const Notifications = ['Check out our latest course', 'This article might inspire you', 'Get started with user testing']
     const Settings = ['Account', 'Settings', 'Theme']
 
 
   return (
     <nav className="flex sticky top-0 z-50 justify-between bg-bg-sand items-center h-[72px] px-5 w-full text-center border-t border-b">
+        {/* Overlay that can close the sidebar and dims the background content */}
+        {isOpen && (
+            <div onClick={() => {setIsOpen(false)}} className="sm:hidden absolute inset-0 w-full h-screen z-30 bg-black/40"/>
+        )}
         {/* Mobile only sidebar */}
         {/* It receives the ability to open or close itself */}
         <MobileSidebar activeLesson={activeLesson} setActiveLesson={setActiveLesson} isOpen={isOpen} setIsOpen={setIsOpen}/> 
