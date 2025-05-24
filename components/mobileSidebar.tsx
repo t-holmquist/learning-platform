@@ -52,7 +52,7 @@ const MobileSidebar = ( {activeLesson, setActiveLesson, isOpen, setIsOpen} : {
         transition={{
         type: "spring",
         stiffness: 300,
-        damping: 30
+        damping: 30,
         }}
         exit={{
           x: '-100%'
@@ -65,7 +65,7 @@ const MobileSidebar = ( {activeLesson, setActiveLesson, isOpen, setIsOpen} : {
             </Link>
             <Image src={"/icons/close.svg"} width={25} height={22} alt='open close sidebar'/>
           </button>
-          <div className='bg-secondary p-2 text-center font-medium border border-black'>Module: The basics</div>
+          <div className='bg-secondary p-2 text-center font-medium border-t border-b border-black'>Module: The basics</div>
           <section className="flex flex-col">
             {lessonData.slice(0, 3).map(({id, title}, idx) => (
               <button 
@@ -92,7 +92,7 @@ const MobileSidebar = ( {activeLesson, setActiveLesson, isOpen, setIsOpen} : {
               </button>
             ))}
           </section>
-          <div className='bg-secondary p-2 text-center font-medium border border-black'>Module: User Testing</div>
+          <div className='bg-secondary p-2 text-center font-medium border-t border-b border-black'>Module: User Testing</div>
           <section className="flex flex-col">
             {lessonData.slice(3, 8).map(({id, title}, idx) => (
               <button 
@@ -119,7 +119,7 @@ const MobileSidebar = ( {activeLesson, setActiveLesson, isOpen, setIsOpen} : {
               </button>
             ))}
           </section>
-          <div className='bg-secondary p-2 text-center font-medium border border-black'>Module: Publishing</div>
+          <div className='bg-secondary p-2 text-center font-medium border-t border-b border-black'>Module: Publishing</div>
           <section className="flex flex-col">
             {lessonData.slice(8, 12).map(({id, title}, idx) => (
               <button 
@@ -146,7 +146,7 @@ const MobileSidebar = ( {activeLesson, setActiveLesson, isOpen, setIsOpen} : {
             ))}
           </section>
           {/* Course progression section */}
-          <section className='flex flex-col gap-4 border-t p-4'>
+          <section className='flex flex-col gap-4 border-t p-4 mb-24 sm:mb-0'>
             <h3 className='text-lg font-bold'>Course Progression</h3>
             <ProgressBar completedLessons={completedLessons} />
             {/* Calculate the ratio of completed lessons. Parseint chosen since the state is set to a string. Could be refactored to a number */}
