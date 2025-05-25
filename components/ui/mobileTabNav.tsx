@@ -22,7 +22,7 @@ const MobileTabNav = () => {
   return (
     // Mobile nav test
     <div className={`flex justify-center ${pathName == "/sign-in" && "hidden"} ${pathName == "/" && "hidden"} `}>
-        <div className="sm:hidden w-11/12 flex justify-between items-center fixed bottom-4 px-7 py-2 z-20  rounded-large  bg-bg-red border">
+        <div className="sm:hidden w-11/12 flex justify-between items-center fixed bottom-6 px-7 py-2 z-20  rounded-large  bg-bg-sand border">
           {/* Dashboard */}
           <Link href={"/dashboard"}>
             <svg className={`${pathName == '/dashboard' && 'fill-primary'}`} width="30" height="30" viewBox="0 0 34 36" xmlns="http://www.w3.org/2000/svg">

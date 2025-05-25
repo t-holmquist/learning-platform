@@ -65,15 +65,15 @@ const UnderstandingGameComponents = ( {activeLesson, setActiveLesson} : {
                 <h2 className="font-bold text-2xl">Additional lesson ressources</h2>
                 <div className="flex gap-2">
                     <Image src={"/icons/book.svg"} width={26} height={26} alt="book icon"/>
-                    <p className="sm:text-lg font-medium underline">User testing the real way - John Doe</p>
+                    <button className="sm:text-lg cursor-pointer hover:text-slate-700 font-medium underline">User testing the real way - John Doe</button>
                 </div>
                 <div className="flex gap-2">
                     <Image src={"/icons/book.svg"} width={26} height={26} alt="book icon"/>
-                    <p className="sm:text-lg font-medium underline">What is a user and how can we find them? - Jane Hopkins </p>
+                    <button className="sm:text-lg cursor-pointer hover:text-slate-700 font-medium underline">What is a user and how can we find them? - Jane Hopkins </button>
                 </div>
                 <div className="flex gap-2">
                     <Image src={"/icons/book.svg"} width={26} height={26} alt="book icon"/>
-                    <p className="sm:text-lg font-medium underline">The next day the users were gone - Lambda Johnson </p>
+                    <button className="sm:text-lg cursor-pointer hover:text-slate-700 font-medium underline">The next day the users were gone - Lambda Johnson </button>
                 </div>
             </div>
             {/* Complete lesson */}
