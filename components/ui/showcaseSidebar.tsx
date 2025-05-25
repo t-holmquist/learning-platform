@@ -5,10 +5,10 @@ export const ShowcaseSidebar = () => {
   return (
 
     <div 
-    className='col-span-4 row-span-11 border space-y-4 rounded-large p-6 bg-bg-red hover:border-primary transition-all'>
+    className='col-span-4 row-span-10 border space-y-4 rounded-large p-6 bg-bg-red hover:border-primary transition-all'>
         <h2 className='text-2xl font-bold'>Simple and approachable course layout</h2>
         <div className='border rounded-large bg-bg-sand'>
-            <div className='bg-secondary p-2 text-center rounded-t-large font-medium border-b border-black'>Module: The basics</div>
+            <div className='bg-secondary p-2 text-center rounded-t-large font-medium border-b border-black'>Module: The Basics</div>
             <section className="flex flex-col">
               {lessonData.slice(0, 3).map(({id, title}, idx) => (
                 <button 
@@ -34,7 +34,7 @@ export const ShowcaseSidebar = () => {
                 </button>
               ))}
             </section>
-            <div className='bg-secondary p-2 text-center font-medium border-b border-t border-black'>Module: User Testing</div>
+            <div className='bg-secondary p-2 text-center font-medium border-b border-t border-black'>Module: Design & Build</div>
             <section className="flex flex-col">
               {lessonData.slice(3, 7).map(({id, title}, idx) => (
                 <button 
