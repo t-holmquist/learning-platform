@@ -21,8 +21,12 @@ const Home = () => {
                 <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' /> 
             </Link>
             <div className='flex gap-2 sm:gap-6 items-center'>
+              <Link href={"/sign-in"}>
                 <button className='font-bold cursor-pointer hover:bg-bg-sandHover py-2 px-4 border rounded-small'>Sign up</button>
+              </Link>
+              <Link href={"/sign-in"}>
                 <button className='font-medium cursor-pointer hover:text-slate-700'>Log in</button>
+              </Link>
             </div>
         </nav>
         <div className='w-full flex flex-col items-center'>
