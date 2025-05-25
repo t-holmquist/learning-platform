@@ -4,7 +4,7 @@ import { motion } from 'motion/react'
 import { useState } from 'react';
 
 
-export const ProgressBarLandingPage = () => {
+export const ShowcaseProgressBar = () => {
 
     const [isActive, setIsActive] = useState(false);
 

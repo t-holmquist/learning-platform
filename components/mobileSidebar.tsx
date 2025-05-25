@@ -71,7 +71,7 @@ const MobileSidebar = ( {activeLesson, setActiveLesson, isOpen, setIsOpen} : {
               <button 
               key={idx}
               onClick={() => {setActiveLesson(id)}}
-              className={id == activeLesson ? `cursor-pointer text-white bg-bg-green` : `cursor-pointer hover:bg-slate-100 text-white`}
+              className={id == activeLesson ? `cursor-pointer text-white bg-bg-green` : `cursor-pointer text-white`}
               >
                 {/* Lesson */}
                 <div className='flex items-center p-2 gap-4'>
@@ -98,7 +98,7 @@ const MobileSidebar = ( {activeLesson, setActiveLesson, isOpen, setIsOpen} : {
               <button 
               key={idx}
               onClick={() => {setActiveLesson(id)}}
-              className={id == activeLesson ? `cursor-pointer text-white bg-bg-green` : `cursor-pointer hover:bg-slate-100 text-white`}
+              className={id == activeLesson ? `cursor-pointer text-white bg-bg-green` : `cursor-pointer text-white`}
               >
                 {/* Lesson */}
                 <div className='flex items-center p-2 gap-4'>
@@ -125,7 +125,7 @@ const MobileSidebar = ( {activeLesson, setActiveLesson, isOpen, setIsOpen} : {
               <button 
               key={idx}
               onClick={() => {setActiveLesson(id)}}
-              className={id == activeLesson ? `cursor-pointer text-white bg-bg-green` : `cursor-pointer hover:bg-slate-100 text-white`}
+              className={id == activeLesson ? `cursor-pointer text-white bg-bg-green` : `cursor-pointer text-white`}
               >
                 <div className='flex items-center p-2 gap-4'>
                     {lessonData[id].completed ? (

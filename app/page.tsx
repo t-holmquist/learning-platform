@@ -4,7 +4,8 @@ import Button from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/ui/footer';
-import { ProgressBarLandingPage } from '@/components/ui/progressBarLandingPage';
+import { ShowcaseProgressBar } from '@/components/ui/showcaseProgressBar';
+import { ShowcaseSidebar } from '@/components/ui/showcaseSidebar';
 
 
 const Home = () => {
@@ -15,7 +16,7 @@ const Home = () => {
             <Link href={"/"}>
                 <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' /> 
             </Link>
-            <div className='hidden sm:flex gap-6 items-center'>
+            <div className='flex gap-2 sm:gap-6 items-center'>
                 <button className='font-bold cursor-pointer hover:bg-bg-sandHover p-2 border rounded-small'>Sign up</button>
                 <button className='font-medium cursor-pointer hover:text-slate-700'>Log in</button>
             </div>
@@ -31,9 +32,9 @@ const Home = () => {
         </div>
         <section className='grid grid-cols-1 lg:grid-cols-12 gap-10 grid-rows-12 px-5 py-5 sm:px-10'>
               {/* Progress */}
-              <ProgressBarLandingPage />
+              <ShowcaseProgressBar />
               {/* Sidebar */}
-              <div className='col-span-4 row-span-12 border rounded-large'></div>
+              <ShowcaseSidebar />
               {/* XP and rank */}
               <div className='col-span-4 row-span-6 border rounded-large'></div>
               {/* Interactive quiz */}
