@@ -7,12 +7,13 @@ import Footer from '@/components/ui/footer';
 import { ShowcaseProgressBar } from '@/components/ui/showcaseProgressBar';
 import { ShowcaseSidebar } from '@/components/ui/showcaseSidebar';
 import { ShowcaseXP } from '@/components/ui/showcaseXP';
+import { ShowcaseQuiz } from '@/components/ui/showcaseQuiz';
 
 
 const Home = () => {
   return (
     // Dot background overflows on mobile -> overflow-x-hidden. No scroll on tablet and desktop -> h-100vh
-    <div className='font-satoshi sm:min-h-screen flex flex-col gap-6 md:gap-20 justify-between overflow-x-hidden'>
+    <div className='font-satoshi sm:min-h-screen flex flex-col gap-6 md:gap-10 justify-between overflow-x-hidden'>
         <nav className='flex justify-between items-center px-5 py-5 sm:px-10'>
             <Link href={"/"}>
                 <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' /> 
@@ -23,8 +24,8 @@ const Home = () => {
             </div>
         </nav>
         <div className='w-full flex flex-col items-center'>
-          <section className='space-y-6 w-11/12 lg:w-8/12 flex flex-col items-center'>
-            <h1 className='font-black text-center text-3xl sm:text-6xl'>Design, Build & Market Your Dream Board Game</h1>
+          <section className='space-y-6 w-11/12 lg:w-7/12 flex flex-col items-center'>
+            <h1 className='font-black leading-20 text-center text-3xl sm:text-6xl'>Design, Build & Market Your Dream Board Game</h1>
             <p className='text-center'>Master the art of board game creation with interactive courses, expert guidance, and a community of passionate designers. From concept to published game.</p>
             <Link href={"/sign-in"}>
               <Button className='w-fit' title='Get started'/>
@@ -39,7 +40,7 @@ const Home = () => {
               {/* XP and rank */}
               <ShowcaseXP />
               {/* Interactive quiz */}
-              <div className='col-span-4 row-span-9 border rounded-large'></div>
+              <ShowcaseQuiz />
               {/* Video learning */}
               <div className='col-span-4 row-span-7 border rounded-large'></div>
         </section>
