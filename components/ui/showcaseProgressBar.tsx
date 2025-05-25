@@ -1,6 +1,5 @@
 'use client'
 
-import { isMobileByWidth } from '@/utils/isMobile';
 import { motion } from 'motion/react'
 import { useState } from 'react';
 
