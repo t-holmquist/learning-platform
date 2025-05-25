@@ -65,7 +65,7 @@ const MobileSidebar = ( {activeLesson, setActiveLesson, isOpen, setIsOpen} : {
             </Link>
             <Image src={"/icons/close.svg"} width={25} height={22} alt='open close sidebar'/>
           </button>
-          <div className='bg-secondary p-2 text-center font-medium border-t border-b border-black'>Module: The basics</div>
+          <div className='bg-secondary p-2 text-center font-medium border-t border-b border-black'>Module: The Basics</div>
           <section className="flex flex-col">
             {lessonData.slice(0, 3).map(({id, title}, idx) => (
               <button 
@@ -92,7 +92,7 @@ const MobileSidebar = ( {activeLesson, setActiveLesson, isOpen, setIsOpen} : {
               </button>
             ))}
           </section>
-          <div className='bg-secondary p-2 text-center font-medium border-t border-b border-black'>Module: User Testing</div>
+          <div className='bg-secondary p-2 text-center font-medium border-t border-b border-black'>Module: Design & Build</div>
           <section className="flex flex-col">
             {lessonData.slice(3, 8).map(({id, title}, idx) => (
               <button 

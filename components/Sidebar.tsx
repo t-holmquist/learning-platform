@@ -38,7 +38,7 @@ const Sidebar = ( {activeLesson, setActiveLesson} : {
       <Link className='flex items-center justify-center h-[70px]' href={"/"}>
             <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' />
       </Link>
-      <div className='bg-secondary p-2 text-center font-medium border border-black'>Module: The basics</div>
+      <div className='bg-secondary p-2 text-center font-medium border border-black'>Module: The Basics</div>
       <section className="flex flex-col">
         {lessonData.slice(0, 3).map(({id, title}, idx) => (
           <button 
@@ -65,7 +65,7 @@ const Sidebar = ( {activeLesson, setActiveLesson} : {
           </button>
         ))}
       </section>
-      <div className='bg-secondary p-2 text-center font-medium border border-black'>Module: User Testing</div>
+      <div className='bg-secondary p-2 text-center font-medium border border-black'>Module: Design & Build</div>
       <section className="flex flex-col">
         {lessonData.slice(3, 8).map(({id, title}, idx) => (
           <button 

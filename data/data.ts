@@ -6,57 +6,57 @@ export const lessonData = [
     },
     {
         id: 1,
-        title: 'How to approach testing real users',
+        title: 'Understanding Game Components',
         completed: false,
     },
     {
         id: 2,
-        title: 'How to approach testing real users',
+        title: 'Basic Rules and Game Mechanics',
         completed: false,
     },
     {
         id: 3,
-        title: 'How to approach testing real users',
+        title: 'Introduction to Board Game Design',
         completed: true,
     },
     {
         id: 4,
-        title: 'How to approach testing real users',
+        title: 'Conceptualizing Your Game',
         completed: true,
     },
         {
         id: 5,
-        title: 'Introduction to user testing',
+        title: 'The Art of Game Balancing',
         completed: true,
     },
     {
         id: 6,
-        title: 'How to approach testing real users',
+        title: 'Prototyping Your Board Game',
         completed: false,
     },
     {
         id: 7,
-        title: 'How to approach testing real users',
+        title: 'Production: Manufacturing Basics',
         completed: false,
     },
     {
         id: 8,
-        title: 'How to approach testing real users',
+        title: 'Introduction to Board Game Marketing',
         completed: false,
     },
     {
         id: 9,
-        title: 'How to approach testing real users',
+        title: 'Identifying Your Target Audience',
         completed: false,
     },
     {
         id: 10,
-        title: 'Introduction to user testing',
+        title: 'Building a Brand for Your Board Game',
         completed: false,
     },
     {
         id: 11,
-        title: 'How to approach testing real users',
+        title: 'Selling a Game: Retail and Distribution',
         completed: false,
     },
 ];
