@@ -1,5 +1,6 @@
 'use client'
 
+import { isMobileByWidth } from '@/utils/isMobile';
 import { motion } from 'motion/react'
 import { useState } from 'react';
 
@@ -14,12 +15,12 @@ export const ShowcaseProgressBar = () => {
     <div 
     onMouseEnter={() => {setIsActive(true)}}
     onMouseLeave={() => {setIsActive(false)}}
-    className='col-span-4 space-y-4 row-span-3 border p-6 rounded-large bg-bg-green hover:border-primary transition-all'>
+    className='col-span-4 space-y-4 row-span-3 border p-6 rounded-large bg-bg-green sm:hover:border-primary transition-all'>
         <h2 className='text-2xl font-bold'>Keep track of your progress</h2>
         <div className="flex shadow-primary rounded-large">
             <motion.div 
             initial={{width: '15%'}}
-            animate={isActive ? {width: '40%'} : '0%'} 
+            animate={isActive ? {width: '40%'} : '0%'}
             transition={{
             type: 'spring',
             duration: 1,
