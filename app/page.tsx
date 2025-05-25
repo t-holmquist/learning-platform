@@ -8,6 +8,7 @@ import { ShowcaseProgressBar } from '@/components/ui/showcaseProgressBar';
 import { ShowcaseSidebar } from '@/components/ui/showcaseSidebar';
 import { ShowcaseXP } from '@/components/ui/showcaseXP';
 import { ShowcaseQuiz } from '@/components/ui/showcaseQuiz';
+import { ShowcaseVideo } from '@/components/ui/showcaseVideo';
 
 
 const Home = () => {
@@ -42,7 +43,7 @@ const Home = () => {
               {/* Interactive quiz */}
               <ShowcaseQuiz />
               {/* Video learning */}
-              <div className='col-span-4 row-span-6 border rounded-large'></div>
+              <ShowcaseVideo />
         </section>
         <Footer/>
     </div>
