@@ -4,6 +4,7 @@
 import Image from "next/image";
 import Button from "./button";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 
 const RecommendedLessons = () => {
@@ -29,23 +30,29 @@ const RecommendedLessons = () => {
             <motion.div 
             variants={variants}
             className="w-full sm:w-fit flex flex-col gap-4 p-6 justify-center border shadow-primary rounded-large">
-                <p>Module: Rule Design</p>
-                <h3 className='text-xl font-bold'>Difficult rules simplified</h3>
-                <Button title="Learn now"/>
+                <p>Module: The Basics</p>
+                <h3 className='text-xl font-bold'>Basic Rules & Game Mechanics</h3>
+                <Link href={"/learn"}>
+                    <Button title="Learn now"/>
+                </Link>
             </motion.div>
             <motion.div 
             variants={variants}
             className="hidden sm:flex flex-col gap-4 p-6 justify-center border shadow-primary rounded-large">
-                <p>Module: Rule Design</p>
-                <h3 className='text-xl font-bold'>Difficult rules simplified</h3>
-                <Button title="Learn now"/>
+                <p>Module: Design & Build</p>
+                <h3 className='text-xl font-bold'>Prototyping Your Game</h3>
+                <Link href={"/learn"}>
+                    <Button title="Learn now"/>
+                </Link>
             </motion.div>
             <motion.div 
             variants={variants}
             className="hidden sm:flex flex-col gap-4 p-6 justify-center border shadow-primary rounded-large">
-                <p>Module: Rule Design</p>
-                <h3 className='text-xl font-bold'>Difficult rules simplified</h3>
-                <Button title="Learn now"/>
+                <p>Module: Publishing</p>
+                <h3 className='text-xl font-bold'>Identifying a Target Audience</h3>
+                <Link href={"/learn"}>
+                    <Button title="Learn now"/>
+                </Link>
             </motion.div>
         </motion.section>
         {/* Shuffle */}
