@@ -5,8 +5,8 @@ export const ShowcaseSidebar = () => {
   return (
 
     <div 
-    className='col-span-4 row-span-12 border space-y-4 rounded-large p-6 bg-bg-red hover:border-primary transition-all'>
-        <h2 className='text-2xl font-bold'>Simple and approachable cource layout</h2>
+    className='col-span-4 row-span-11 border space-y-4 rounded-large p-6 bg-bg-red hover:border-primary transition-all'>
+        <h2 className='text-2xl font-bold'>Simple and approachable course layout</h2>
         <div className='border rounded-large bg-bg-sand'>
             <div className='bg-secondary p-2 text-center rounded-t-large font-medium border-b border-black'>Module: The basics</div>
             <section className="flex flex-col">
@@ -36,7 +36,7 @@ export const ShowcaseSidebar = () => {
             </section>
             <div className='bg-secondary p-2 text-center font-medium border-b border-t border-black'>Module: User Testing</div>
             <section className="flex flex-col">
-              {lessonData.slice(3, 8).map(({id, title}, idx) => (
+              {lessonData.slice(3, 7).map(({id, title}, idx) => (
                 <button 
                 key={idx}
                 
@@ -63,7 +63,7 @@ export const ShowcaseSidebar = () => {
             </section>
             <div className='bg-secondary p-2 text-center font-medium border-b border-t border-black'>Module: Publishing</div>
             <section className="flex flex-col">
-              {lessonData.slice(8, 12).map(({id, title}, idx) => (
+              {lessonData.slice(8, 10).map(({id, title}, idx) => (
                 <button 
                 key={idx}
                 

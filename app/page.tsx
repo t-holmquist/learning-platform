@@ -25,8 +25,8 @@ const Home = () => {
         </nav>
         <div className='w-full flex flex-col items-center'>
           <section className='space-y-6 w-11/12 lg:w-7/12 flex flex-col items-center'>
-            <h1 className='font-black leading-20 text-center text-3xl sm:text-6xl'>Design, Build & Market Your Dream Board Game</h1>
-            <p className='text-center'>Master the art of board game creation with interactive courses, expert guidance, and a community of passionate designers. From concept to published game.</p>
+            <h1 className='font-black sm:leading-20 text-center text-3xl sm:text-6xl'>Design, Build & Market Your Dream Board Game</h1>
+            <p className='sm:text-center sm:text-lg'>Master the art of board game creation with interactive courses, expert guidance, and a community of passionate designers. From concept to published game.</p>
             <Link href={"/sign-in"}>
               <Button className='w-fit' title='Get started'/>
             </Link>
@@ -42,7 +42,7 @@ const Home = () => {
               {/* Interactive quiz */}
               <ShowcaseQuiz />
               {/* Video learning */}
-              <div className='col-span-4 row-span-7 border rounded-large'></div>
+              <div className='col-span-4 row-span-6 border rounded-large'></div>
         </section>
         <Footer/>
     </div>
