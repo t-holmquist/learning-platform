@@ -22,7 +22,7 @@ const Home = () => {
             </Link>
             <div className='flex gap-2 sm:gap-6 items-center'>
               <Link href={"/sign-in"}>
-                <button className='font-bold text-sm sm:text-base cursor-pointer bg-primary text-white py-2 px-2 border rounded-small'>Get started</button>
+                <button className='font-bold text-sm sm:text-base cursor-pointer bg-primary hover:bg-primaryHover text-white py-2 px-2 border rounded-small'>Get started</button>
               </Link>
               <Link href={"/sign-in"}>
                 <button className='font-medium text-sm sm:text-base cursor-pointer hover:text-slate-700'>Log in</button>
