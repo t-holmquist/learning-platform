@@ -4,6 +4,7 @@ import Button from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '@/components/ui/footer';
+import { ProgressBarLandingPage } from '@/components/ui/progressBarLandingPage';
 
 
 const Home = () => {
@@ -23,12 +24,14 @@ const Home = () => {
           <section className='space-y-6 w-11/12 lg:w-8/12 flex flex-col items-center'>
             <h1 className='font-black text-center text-3xl sm:text-6xl'>Design, Build & Market Your Dream Board Game</h1>
             <p className='text-center'>Master the art of board game creation with interactive courses, expert guidance, and a community of passionate designers. From concept to published game.</p>
-            <Button className='w-fit' title='Get started'/>
+            <Link href={"/sign-in"}>
+              <Button className='w-fit' title='Get started'/>
+            </Link>
           </section>
         </div>
         <section className='grid grid-cols-1 lg:grid-cols-12 gap-10 grid-rows-12 px-5 py-5 sm:px-10'>
               {/* Progress */}
-              <div className='col-span-4 row-span-3 border rounded-large'></div>
+              <ProgressBarLandingPage />
               {/* Sidebar */}
               <div className='col-span-4 row-span-12 border rounded-large'></div>
               {/* XP and rank */}
