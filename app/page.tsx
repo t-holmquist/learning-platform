@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Footer from '@/components/ui/footer';
 import { ShowcaseProgressBar } from '@/components/ui/showcaseProgressBar';
 import { ShowcaseSidebar } from '@/components/ui/showcaseSidebar';
+import { ShowcaseXP } from '@/components/ui/showcaseXP';
 
 
 const Home = () => {
@@ -36,11 +37,11 @@ const Home = () => {
               {/* Sidebar */}
               <ShowcaseSidebar />
               {/* XP and rank */}
-              <div className='col-span-4 row-span-6 border rounded-large'></div>
+              <ShowcaseXP />
               {/* Interactive quiz */}
               <div className='col-span-4 row-span-9 border rounded-large'></div>
               {/* Video learning */}
-              <div className='col-span-4 row-span-6 border rounded-large'></div>
+              <div className='col-span-4 row-span-7 border rounded-large'></div>
         </section>
         <Footer/>
     </div>

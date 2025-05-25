@@ -1,20 +1,10 @@
-'use client'
-
 import { lessonData } from '@/data/data';
-import { motion } from 'motion/react'
-import { useState } from 'react';
-
 
 export const ShowcaseSidebar = () => {
 
-    const [isActive, setIsActive] = useState(false);
-
-  
   return (
 
     <div 
-    onMouseEnter={() => {setIsActive(true)}}
-    onMouseLeave={() => {setIsActive(false)}}
     className='col-span-4 row-span-12 border space-y-4 rounded-large p-6 bg-bg-red hover:border-primary transition-all'>
         <h2 className='text-2xl font-bold'>Simple and approachable cource layout</h2>
         <div className='border rounded-large bg-bg-sand'>
