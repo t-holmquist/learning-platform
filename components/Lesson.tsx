@@ -1,9 +1,10 @@
 
 import { Dispatch, SetStateAction } from "react";
 import IntroductionLesson from "./lessons/introductionLesson";
-import UserTestingLesson from "./lessons/userTestingLesson";
 import NavBarCourse from "./ui/navBarCourse";
 import ComingSoon from "./lessons/comingSoon";
+import UnderstandingGameComponents from "./lessons/understandingGameComponents";
+import GameMechanics from "./lessons/gameMechanics";
 
 
 const Lesson = ( {activeLesson, setActiveLesson} : {
@@ -20,7 +21,10 @@ const Lesson = ( {activeLesson, setActiveLesson} : {
             <IntroductionLesson activeLesson={activeLesson} setActiveLesson={setActiveLesson} />
         )}
         {activeLesson == 1 && (
-            <UserTestingLesson />
+            <UnderstandingGameComponents activeLesson={activeLesson} setActiveLesson={setActiveLesson} />
+        )}
+        {activeLesson == 2 && (
+            <GameMechanics activeLesson={activeLesson} setActiveLesson={setActiveLesson} />
         )}
         {activeLesson > 2 && (
             <ComingSoon activeLesson={activeLesson} setActiveLesson={setActiveLesson} />

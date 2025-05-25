@@ -1,4 +1,6 @@
-import { Dispatch, SetStateAction } from "react";
+'use client'
+
+import { Dispatch, SetStateAction, useEffect } from "react";
 import { lessonData } from "@/data/data";
 
 const ComingSoon = ( {activeLesson, setActiveLesson} : {
@@ -18,6 +20,13 @@ const ComingSoon = ( {activeLesson, setActiveLesson} : {
             return
         }
     }
+
+    // Scroll to the top on mount when the activelesson id changes to this lesson
+    useEffect(() => {
+    
+          window.scrollTo(0, 0);
+    
+        }, [])
 
 
 

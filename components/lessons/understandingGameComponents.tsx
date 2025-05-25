@@ -6,7 +6,7 @@ import { Video } from "../ui/video";
 import Image from "next/image";
 import { lessonData } from "@/data/data";
 
-const IntroductionLesson = ( {activeLesson, setActiveLesson} : {
+const UnderstandingGameComponents = ( {activeLesson, setActiveLesson} : {
   activeLesson: number;
   setActiveLesson: Dispatch<SetStateAction<number>>
 } ) => {
@@ -24,13 +24,12 @@ const IntroductionLesson = ( {activeLesson, setActiveLesson} : {
         }
     }
 
-
     // Scroll to the top on mount when the activelesson id changes to this lesson
     useEffect(() => {
-
-      window.scrollTo(0, 0);
-
-    }, [])
+    
+          window.scrollTo(0, 0);
+    
+        }, [])
 
 
 
@@ -40,7 +39,7 @@ const IntroductionLesson = ( {activeLesson, setActiveLesson} : {
       <div className='w-full md:w-11/12 lg:w-9/12 p-4 lg:px-6 lg:py-14'>
           {/* Video and title */}
           <div className='space-y-6'>
-            <h1 className='text-3xl sm:text-6xl font-black'>Introduction video</h1>
+            <h1 className='text-3xl sm:text-6xl font-black'>Understanding Game Components</h1>
             <Video/>
           </div>
           {/* Content */}
@@ -89,4 +88,4 @@ const IntroductionLesson = ( {activeLesson, setActiveLesson} : {
   )
 }
 
-export default IntroductionLesson;
+export default UnderstandingGameComponents;
