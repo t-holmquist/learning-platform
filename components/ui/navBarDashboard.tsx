@@ -22,6 +22,9 @@ const NavBarDashboard = () => {
             <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' />
         </Link>
         <div className="flex items-center gap-4 font-bold">
+            <Link href={"/dashboard"}>
+                <button className="hidden sm:block cursor-pointer hover:text-slate-600">Dashboard</button>
+            </Link>
             <button className="hidden sm:block cursor-pointer hover:text-slate-600">Course</button>
             <button className="hidden sm:block cursor-pointer hover:text-slate-600">Design Assets</button>
             <button onClick={() => {setIsNotificationOpen(!isNotificationOpen); setIsSettingsOpen(false)}} className="relative cursor-pointer">
