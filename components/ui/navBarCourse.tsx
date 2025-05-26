@@ -5,6 +5,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { AnimatePresence, motion } from 'motion/react';
 import { lessonData } from "@/data/data";
 import MobileSidebar from "../mobileSidebar";
+import Link from "next/link";
 
 
 
@@ -53,6 +54,9 @@ const NavBarCourse = ( { activeLesson, setActiveLesson} : {
         <MobileSidebar activeLesson={activeLesson} setActiveLesson={setActiveLesson} isOpen={isOpen} setIsOpen={setIsOpen}/> 
         <p>{lessonData[activeLesson].title}</p>
         <div className="flex items-center gap-6 sm:gap-4 font-bold">
+            <Link href={"/dashboard"}>
+                <button className="hidden sm:block cursor-pointer hover:text-slate-600">Dashboard</button>
+            </Link>
             <button className="hidden sm:block cursor-pointer hover:text-slate-600">Course</button>
             <button className="hidden sm:block cursor-pointer hover:text-slate-600">Design Assets</button>
             {/* Sidebar state button */}
