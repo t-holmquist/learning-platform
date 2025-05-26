@@ -19,10 +19,6 @@ export default function Dashboard() {
         <div className="flex flex-col gap-8">
           <div className="relative">
             <h1 className="font-black text-3xl sm:text-6xl">Welcome back, Mathias</h1>
-            {/* Motion circles - hidden on mobile */}
-            <div className="hidden sm:block">
-              <MotionCircles />
-            </div>
           </div>
           <h2 className="font-bold text-2xl">Keep Learning</h2>
           <ContinueLessonCard />
