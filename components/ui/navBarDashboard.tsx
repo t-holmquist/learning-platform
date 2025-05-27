@@ -25,7 +25,7 @@ const NavBarDashboard = () => {
             <Link href={"/dashboard"}>
                 <button className="hidden sm:block cursor-pointer hover:text-slate-600">Dashboard</button>
             </Link>
-            <button className="hidden sm:block cursor-pointer hover:text-slate-600">Course</button>
+            <button className="hidden sm:block cursor-pointer hover:text-slate-600">Courses</button>
             <button className="hidden sm:block cursor-pointer hover:text-slate-600">Design Assets</button>
             <button onClick={() => {setIsNotificationOpen(!isNotificationOpen); setIsSettingsOpen(false)}} className="relative cursor-pointer">
                 <Image className="hidden sm:block" src={"/icons/bell.svg"} width={20} height={20} alt="notifications"/>

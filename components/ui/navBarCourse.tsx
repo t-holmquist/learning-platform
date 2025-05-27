@@ -57,7 +57,7 @@ const NavBarCourse = ( { activeLesson, setActiveLesson} : {
             <Link href={"/dashboard"}>
                 <button className="hidden sm:block cursor-pointer hover:text-slate-600">Dashboard</button>
             </Link>
-            <button className="hidden sm:block cursor-pointer hover:text-slate-600">Course</button>
+            <button className="hidden sm:block cursor-pointer hover:text-slate-600">Courses</button>
             <button className="hidden sm:block cursor-pointer hover:text-slate-600">Design Assets</button>
             {/* Sidebar state button */}
             <button onClick={() => {setIsOpen(!isOpen)}} className='lg:hidden border bg-bg-green p-2 rounded-full'>
