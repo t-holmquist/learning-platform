@@ -10,7 +10,8 @@ const satoshi = localFont({
 
 export const metadata: Metadata = {
   title: "Learning platform",
-  description: "A learning platform for developing board games",
+  description: "Design, build and market your own board game",
+  keywords: ['Board game'],
 };
 
 export default function RootLayout({

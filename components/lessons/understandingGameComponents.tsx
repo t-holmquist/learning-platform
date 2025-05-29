@@ -26,10 +26,14 @@ const UnderstandingGameComponents = ( {activeLesson, setActiveLesson} : {
 
     // Scroll to the top on mount when the activelesson id changes to this lesson
     useEffect(() => {
-    
-          window.scrollTo(0, 0);
-    
-        }, [])
+
+      window.scrollTo({
+        top:0,
+        left: 0,
+        behavior: "smooth"
+      });
+
+    }, [])
 
 
 
