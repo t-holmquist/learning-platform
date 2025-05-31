@@ -65,19 +65,19 @@ const GameMechanics = ( {activeLesson, setActiveLesson} : {
             {/* Test */}
             <KnowledgeTest/>
             {/* Additional ressources */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-6">
                 <h2 className="font-bold text-2xl">Additional lesson ressources</h2>
                 <div className="flex gap-2">
                     <Image src={"/icons/book.svg"} width={26} height={26} alt="book icon"/>
-                    <button className="sm:text-lg cursor-pointer hover:text-slate-700 font-medium underline">User testing the real way - John Doe</button>
+                    <button className="text-sm sm:text-lg cursor-pointer hover:text-slate-700 font-medium underline">User testing the real way - John Doe</button>
                 </div>
                 <div className="flex gap-2">
                     <Image src={"/icons/book.svg"} width={26} height={26} alt="book icon"/>
-                    <button className="sm:text-lg cursor-pointer hover:text-slate-700 font-medium underline">What is a user and how can we find them? - Jane Hopkins </button>
+                    <button className="text-sm sm:text-lg cursor-pointer hover:text-slate-700 font-medium underline">What is a user? - Jane Hopkins </button>
                 </div>
                 <div className="flex gap-2">
                     <Image src={"/icons/book.svg"} width={26} height={26} alt="book icon"/>
-                    <button className="sm:text-lg cursor-pointer hover:text-slate-700 font-medium underline">The next day the users were gone - Lambda Johnson </button>
+                    <button className="text-sm sm:text-lg cursor-pointer hover:text-slate-700 font-medium underline">Finding the optimal user - Lambda Johnson </button>
                 </div>
             </div>
             {/* Complete lesson */}
