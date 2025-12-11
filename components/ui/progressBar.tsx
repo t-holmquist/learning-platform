@@ -23,6 +23,7 @@ export const ProgressBar = ( { completedLessons } : {
   
   return (
     <div className="flex shadow-primary rounded-large">
+      
         <motion.div 
         initial={{
           width: '0%'
@@ -35,7 +36,7 @@ export const ProgressBar = ( { completedLessons } : {
           duration: 1,
           bounce: 0.3,
         }}
-        className="bg-secondary rounded-l-xl p-3 border">
+        className="bg-secondary rounded-l-xl p-1 border">
           <p className="text-black font-bold">{completedLessons ? `${completedLessons}` : `${staticCompletedLessons}`}%</p>
         </motion.div>
         {/* Flex 1 allows the dot div to shrink and grow regardless of initial width */}

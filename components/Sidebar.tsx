@@ -38,6 +38,12 @@ const Sidebar = ( {activeLesson, setActiveLesson} : {
       <Link className='flex items-center justify-center h-[70px]' href={"/"}>
             <Image src={"/icons/Logo.svg"} width={200} height={30} alt='BoardCraft Studio Logo' />
       </Link>
+      {/* Course progression section */}
+      <section className='flex flex-col gap-2 border-t p-4'>
+        <ProgressBar completedLessons={completedLessons} />
+        {/* Calculate the ratio of completed lessons. Parseint chosen since the state is set to a string. Could be refactored to a number */}
+        <p className='text-sm'>{`${Math.round(lessonData.length / 100 * parseInt(completedLessons)) } of ${lessonData.length} lessons completed`}</p>
+      </section>
       <div className='bg-secondary p-2 text-center font-medium border border-black'>Module: The Basics</div>
       <section className="flex flex-col">
         {lessonData.slice(0, 3).map(({id, title}, idx) => (
@@ -118,13 +124,7 @@ const Sidebar = ( {activeLesson, setActiveLesson} : {
           </button>
         ))}
       </section>
-      {/* Course progression section */}
-      <section className='flex flex-col gap-4 border-t p-4'>
-        <h3 className='text-lg font-bold'>Course Progression</h3>
-        <ProgressBar completedLessons={completedLessons} />
-        {/* Calculate the ratio of completed lessons. Parseint chosen since the state is set to a string. Could be refactored to a number */}
-        <p>{`${Math.round(lessonData.length / 100 * parseInt(completedLessons)) } of ${lessonData.length} lessons completed`}</p>
-      </section>
+      
 
     </div>
   )

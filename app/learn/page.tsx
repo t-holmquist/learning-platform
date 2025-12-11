@@ -9,7 +9,6 @@ import { useState } from "react";
 
 const Learn = () => {
 
-
   const [activeLesson, setActiveLesson] = useState(0);
 
   // mobile sidebar component kan være under sidebar og være hidden på large devices

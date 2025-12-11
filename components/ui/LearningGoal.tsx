@@ -18,8 +18,6 @@ const LearningGoal = () => {
     setIsOpen(false)
   }
 
-  
-
   return (
     <motion.div 
     initial={{x: 20}}
